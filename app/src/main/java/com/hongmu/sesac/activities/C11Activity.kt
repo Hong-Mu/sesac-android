@@ -39,6 +39,7 @@ class C11Activity : AppCompatActivity() {
             addView(title, WRAP_CONTENT, WRAP_CONTENT)
         }
 
-        setContentView(layout)
+        //setContentView(layout)
+        setContentView(R.layout.activity_c11)
     }
 }
