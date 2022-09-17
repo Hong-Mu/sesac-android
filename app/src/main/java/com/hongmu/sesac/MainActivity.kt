@@ -3,6 +3,7 @@ package com.hongmu.sesac
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hongmu.sesac.activities.C11Activity
+import com.hongmu.sesac.activities.C12Activity
 import com.hongmu.sesac.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerView.adapter = ActivityAdapter(listOf(
-            C11Activity::class.java
+            C12Activity::class.java,
+            C11Activity::class.java,
         ))
     }
 }
