@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sesac</string>
     <string name="contact">
@@ -8,6 +9,5 @@
     </string>
     <string name="hello">Hello</string>
     <string name="world">World</string>
-
-    <string name="data_c29">Hello</string>
+    <string name="data_c29">안녕</string>
 </resources>
