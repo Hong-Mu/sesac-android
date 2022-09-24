@@ -1,4 +1,4 @@
-package com.hongmu.sesac
+package com.hongmu.sesac.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
