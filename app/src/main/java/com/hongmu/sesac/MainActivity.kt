@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerView.adapter = ActivityAdapter(listOf(
+            C23Activity::class.java,
             C24Activity::class.java,
             CallKeypadActivity::class.java,
             KakaoConfirmPasswordActivity::class.java,
