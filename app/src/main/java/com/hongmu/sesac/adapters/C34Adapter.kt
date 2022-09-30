@@ -14,16 +14,14 @@ import com.hongmu.sesac.models.C34Model
 class C34Adapter(ctx: Context, val resId: Int, val data: MutableList<C34Model>) :
     ArrayAdapter<C34Model>(ctx, resId) {
 
-    override fun getCount(): Int {
-        return data.size
-    }
+    override fun getCount() = data.size
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var convertView = convertView
         if (convertView == null) {
             val inflater =
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            convertView = inflater.inflate(resId, null)
+            convertView = LayoutInflater.from(parent.context).inflate(resId, null)
             val holder = C34Holder(convertView)
             convertView!!.tag = holder
         }
