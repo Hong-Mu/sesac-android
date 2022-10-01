@@ -13,8 +13,20 @@
         android:theme="@style/Theme.Sesac"
         tools:targetApi="31">
         <activity
+            android:name=".activities.C43Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.C42SubActivity"
             android:exported="false">
+            <intent-filter>
+                <action android:name="ACTION_SUB"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
