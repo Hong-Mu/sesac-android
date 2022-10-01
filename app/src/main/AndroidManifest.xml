@@ -13,6 +13,20 @@
         android:theme="@style/Theme.Sesac"
         tools:targetApi="31">
         <activity
+            android:name=".activities.C40SubActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.C40Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.C38Activity"
             android:exported="false">
             <meta-data
