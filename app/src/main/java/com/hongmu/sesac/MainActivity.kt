@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerView.adapter = ActivityAdapter(listOf(
+            C52Activity::class.java,
             C51Activity::class.java,
             C49Activity::class.java,
             C48Activity::class.java,
