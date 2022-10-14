@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="CATEGORY_A"
+        android:title="Settings A">
+        <SwitchPreferenceCompat
+            android:key="KEY_1"
+            android:title="Setting 1"/>
+        <SwitchPreferenceCompat
+            android:key="KEY_2"
+            android:title="Setting 2"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="CATEGORY_B"
+        android:title="Settings B">
+        <SwitchPreferenceCompat
+            android:key="KEY_3"
+            android:title="Setting 3"/>
+        <SwitchPreferenceCompat
+            android:key="KEY_4"
+            android:title="Setting 4"/>
+    </PreferenceCategory>
+</PreferenceScreen>
