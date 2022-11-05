@@ -19,21 +19,44 @@
         android:theme="@style/Theme.Sesac"
         tools:targetApi="31">
         <activity
+            android:name=".activities.C60SubActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.C60Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.C59Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.C66Activity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <provider
-            android:authorities="com.hongmu.sesac.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.hongmu.sesac.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_c66"/>
+                android:resource="@xml/file_c66" />
         </provider>
+
         <activity
             android:name=".activities.C65Activity"
             android:exported="false">

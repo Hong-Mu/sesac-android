@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
             C65Activity::class.java,
             C64Activity::class.java,
             C63Activity::class.java,
+            C60Activity::class.java,
+            C59Activity::class.java,
             C57Activity::class.java,
             C56Activity::class.java,
             C55Activity::class.java,
