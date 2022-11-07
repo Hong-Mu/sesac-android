@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="KEY_CATEGORY_NOTIFICATION"
+        android:title="알림 설정">
+        <SwitchPreferenceCompat
+            android:key="KEY_MESSAGE"
+            android:title="메시지 알림"/>
+        <SwitchPreferenceCompat
+            android:key="KEY_SOUND"
+            android:title="소리 알림"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="KEY_CATEGORY_ETC"
+        android:title="기타 설정">
+        <EditTextPreference
+            android:key="KEY_ID"
+            android:title="ID 설정"/>
+        <ListPreference
+            android:key="KEY_COLOR"
+            android:entries="@array/color_todo"
+            android:entryValues="@array/color_todo"
+            android:title="색상 선택"/>
+    </PreferenceCategory>
+</PreferenceScreen>

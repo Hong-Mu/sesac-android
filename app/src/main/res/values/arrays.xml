@@ -10,4 +10,14 @@
         <item>카톡이니?</item>
         <item>카카오톡</item>
     </string-array>
+    <string-array name="color_todo">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+    <string-array name="color_value_todo">
+        <item>#F00</item>
+        <item>#0F0</item>
+        <item>#00F</item>
+    </string-array>
 </resources>

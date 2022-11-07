@@ -19,6 +19,13 @@
         android:theme="@style/Theme.Sesac"
         tools:targetApi="31">
         <activity
+            android:name=".activities.TodoSettingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.C60SubActivity"
             android:exported="false">
             <meta-data
