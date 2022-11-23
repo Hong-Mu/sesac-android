@@ -3,6 +3,7 @@ package com.hongmu.sesac
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hongmu.sesac.activities.*
+import com.hongmu.sesac.activities.assignments.NotificationResponseActivity
 import com.hongmu.sesac.activities.background.C79Activity
 import com.hongmu.sesac.activities.notification.C74Activity
 import com.hongmu.sesac.adapters.ActivityAdapter
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerView.adapter = ActivityAdapter(listOf(
+            NotificationResponseActivity::class.java,
             C79Activity::class.java,
             C74Activity::class.java,
             C72Activity::class.java,
