@@ -8,6 +8,7 @@ import com.hongmu.sesac.activities.background.C79Activity
 import com.hongmu.sesac.activities.geolocation.C81Activity
 import com.hongmu.sesac.activities.notification.C74Activity
 import com.hongmu.sesac.adapters.ActivityAdapter
+import com.hongmu.sesac.activities.geolocation.C82Activity
 import com.hongmu.sesac.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerView.adapter = ActivityAdapter(listOf(
+            C82Activity::class.java,
             C81Activity::class.java,
             NotificationResponseActivity::class.java,
             C79Activity::class.java,

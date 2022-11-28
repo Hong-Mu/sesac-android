@@ -1,6 +1,7 @@
 package com.hongmu.sesac.activities.geolocation;
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,7 @@ class C81Activity : AppCompatActivity(){
         }
     }
 
+    @SuppressLint("MissingPermission")
     private fun getLocation(){
         val location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
         location?.let {
