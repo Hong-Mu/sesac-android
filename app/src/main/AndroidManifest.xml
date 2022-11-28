@@ -2,10 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 위치 정보 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 진동 -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 연락처 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 전화 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -18,10 +22,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sesac"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.geolocation.C81Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <receiver
             android:name=".receivers.NotificationReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
 
         <activity
             android:name=".activities.assignments.NotificationResponseActivity"
