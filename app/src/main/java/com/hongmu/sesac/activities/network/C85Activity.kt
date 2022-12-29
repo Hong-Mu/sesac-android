@@ -1,14 +1,12 @@
 package com.hongmu.sesac.activities.network
 
-import android.app.usage.NetworkStatsManager
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.hongmu.sesac.R
-import java.net.ConnectException
 
 class C85Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,28 +17,29 @@ class C85Activity : AppCompatActivity() {
         textResult.text = isNetworkAvailable()
     }
 
-    private fun isNetworkAvailable(): String{
+    private fun isNetworkAvailable(): String {
         val connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val currentNetwork = connectivityManager.activeNetwork ?: return "Offline"
-            val caps = connectivityManager.getNetworkCapabilities(currentNetwork) ?: return "Offline"
-            return when {
-                caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
-                    return "WiFi Online"
+            val currentNetwork = connectivityManager.activeNetwork
+            val caps = connectivityManager.getNetworkCapabilities(currentNetwork)
+            val result = caps?.run {
+                when {
+                    hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> "WiFi Online"
+                    hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> "Cellular Online"
+                    hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> "Ethernet Online"
+                    else -> "Offline"
                 }
-                caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
-                    return "Cellular Online"
-                }
+            } ?: "Offline"
+            return result
+        } else {
+            val result = when (connectivityManager.activeNetworkInfo?.type) {
+                ConnectivityManager.TYPE_WIFI -> "WiFi Online"
+                ConnectivityManager.TYPE_MOBILE -> "Cellular Online"
+                ConnectivityManager.TYPE_ETHERNET -> "Ethernet Online"
                 else -> "Offline"
             }
-
-        } else {
-            if(connectivityManager.activeNetworkInfo?.isConnected ?: false){
-                return "Online"
-            } else {
-                return "Offline"
-            }
+            return result
         }
     }
 }
